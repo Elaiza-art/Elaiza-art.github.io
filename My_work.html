@@ -1,50 +1,128 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Художественный блог</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
-<div class="container">
+    <div class="container" >
         <header>
-            <a c href="">Главная</a>
-            <nav>
-                <ul>
-                    <li><a href="">Мои работы</a></li>
-                    <li><a href="">Челенджи</a></li>
-                    <li><a href="">Скейтчи</a></li>
-                    <li><a href="">Контакты</a></li>
+            <div class="main"><a class="a_cool" id="main" href="index.html">Главная</a></div>
+            <nav >
+                <ul class="navigation ">
+                    <li><a class="a_cool" href="My_work.html">Мои работы</a></li>
+                    <li><a class="a_cool" href="sketch.html">Скейтчи</a></li>
+                    <li><a class="a_cool" href="mokap.html">Мокап</a></li>
+                    <li class="contacs"><a class="a_cool" id="contacs" href="#footer">Контакты</a></li>
                 </ul>
             </nav>
             <h1>Сайт-визитка Галичиной Елизаветы</h1>
-            <p>Добро пожаловать! </p>
+            <h3>Добро пожаловать! </h3>
         </header>
 
         <main>
-            <article>
-                <section>
-                    <h2></h2>
-                    <p>Тут будет краткая информация обо мне</p>
-                    <img height="500" src="./image/Я.jpg" alt="Воть моя фотокарточка">
-                </section>    
+            <article class="article block_decore">
+                <p>Категории моих рисунков</p>
+                <section class="block_section_work">
+                    <img height="400px" src="image/people/портреты/шляgrf.jpeg" alt="Девушка">
+                    <div class="blocks">
+                        <a class="a_cool" href="people.html"><h1>People</h1></a>
+                        <p>Здесь вы сможете посмотреть:</p>
+                        <ul>
+                            <li>Арт-портреты</li>
+                            <li>Изображения в движении</li>
+                            <li>Фантастические и сказочные персонажи</li>
+                            <li>Модные иллюстрации — стильные наряды и мода.</li>
+                            
+                        </ul>
+                    </div>
+                </section> 
+
+                <section class="block_section_work" id="blocks_special">
+                    <img height="400px" src="image/anymal/НовыйХолст2.png" alt="Глаз кошки">
+                    <div class="blocks">
+                        <a class="a_cool"  href="anymal.html"><h1>Животные</h1></a>
+                        <p>Здесь вы сможете посмотреть:</p>
+                        <ul>
+                            <li>разного рода животинки: птички, грызуны, кошечки и многое другое </li>
+                            <li> Кстати, может я вскоре и этот блок разделю на разделы...хммм</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="block_section_work">
+                    <img height="400px" src="image/pers/курапикагрусть.jpg" alt="Персонаж из X&X - Курапика">
+                    <div class="blocks">
+                        <a class="a_cool"  href="pers_fan.html"><h1>Персонажи по фандомам</h1></a>
+                        <p>Здесь вы сможете посмотреть:</p>
+                        <ul>
+                            <li> Любимых героив из аниме, книг, фильмов и ,конечно, игр </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="block_section_work" id="blocks_special">
+                    <img height="250px" src="image/view/cytu.jpg" alt="Горы">
+                    <div class="blocks">
+                        <a class="a_cool"  href="viewes.html"><h1>Пейзажи</h1></a>
+                        <p>Здесь вы сможете посмотреть:</p>
+                        <ul>
+                            <li>мои редкие порывы порисовать пейзажи </li>
+                            <li>У меня пока плохо получается, но я стараюсь. В этой области мне нужно больше практики)</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="block_section_work">
+                     <a class="a_cool" href=""><h1>Пока не знаю ...</h1></a>
+                </section>   
+
             </article>
 
-            <aside>
+            <aside class="aside" >
                 <section>
                     <h2>Боковой блок</h2>
                     <p>Категории моих рисунков</p>
+                    <div class="section_based">
+                        <section class="block_section">
+                            <a id="aside_nav" href="people.html"><h2>People</h2></a>
+                        </section>
+                        <section class="block_section">
+                            <a id="aside_nav" href="anymal.html"><h2>Животные</h2></a>
+                        </section>
+                        <section class="block_section">
+                            <a id="aside_nav" href="viewes.html"><h2>Пейзажи</h2></a>
+                        </section>
+                        <section class="block_section">
+                            <a href="" id="aside_nav"><h2>Я еще не придумала</h2></a>
+                        </section>
+                    </div>
                 </section>
             </aside>
         </main>
 
-        <footer>
-            <ol>
-                <li><a href="">Тг</a></li>
-                <li><a href="">GitHub</a></li>
-                <li><a href="">Pinterest</a></li>
+        <footer id="footer">
+            <ol class="navigation ">
+                <li>
+                    <a href="https://t.me/Lizi_pu" target="_blank">
+                        <img class="symbol" height="40px" src="image/telegram.png" alt="ТГ">
+                    </a>
+                </li>
+                <li><a  href="https://github.com/Elaiza-art" target="_blank">
+                        <img class="symbol" height="40px" src="image/github.png" alt="GitHub">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ru.pinterest.com/Zeniza_oka/" target="_blank">
+                        <img class="symbol" height="40px" src="image/pinterest.png" alt="Pinterest">
+                    </a>
+                </li>
             </ol>
         </footer>
-    </div>  
+    </div>
 </body>
 </html>

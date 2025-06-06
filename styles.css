@@ -49,22 +49,34 @@ main{
     border-radius:10px 10px 0 0 ;
 }
 
-/*
-a{
+.section_based{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#aside_nav{
     text-decoration: none;
-    color: #0a5c1c;           
+    color: #b63b5a;           
     font-weight: bold;
     font-style: ita;
     border-bottom: 0 solid #4A5759; 
     transition: 0.2s; 
     display: inline-block;
+    
 }
 
-a:hover {
+#aside_nav:hover {
     color:rgb(112, 31, 51); 
     border-bottom-width: 3px;
     transform: rotate(3deg) translate(5px);
-   }*/
+   }
+
+
+p{
+    font-family:'Times New Roman', Times, sans-serif;
+}
 
 .a_cool {
     color:#360909;
@@ -75,6 +87,7 @@ a:hover {
     text-decoration: none;
     padding: 5px 15px;
     transition: 0.3s; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #main{
@@ -102,12 +115,195 @@ a:hover {
 }
 
 h2{
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 10px;
+}
+
+h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 footer{
     background-color: #B0C4B1;
     margin-top: 10px;
     border-radius: 10px;
+}
+
+.symbol {   
+    color: #fffcfc;   
+    margin-top:6px;   
+    margin-left:29px;   
+ } 
+
+ .symbol:hover {   
+    padding:2px;   
+    background-color:#DEDBD2;   
+    border-radius: 5px;
+}
+
+/* сss для страницы Мои работы*/
+
+.block_section_work{
+    display: flex;
+    background-color: #EDAFB8;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+#blocks_special{
+    background-color: #DEDBD2;
+}
+
+.blocks{
+    display: flex;
+    flex-direction: column;
+    padding: 20px ;
+}
+
+/* для вкладки people  */
+
+.post-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1120px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.post-item {
+    padding: 10px;
+}
+
+.post-link {
+    display: block;
+    text-decoration: none;
+    color: #4A5759;
+    font-weight: 600;
+    position: relative;
+    z-index: 5;
+}
+
+.post-item-wrap {
+    position: relative;
+    background-color: #EDAFB8;
+    background-image: radial-gradient(#f8f3e2 2px, transparent 1px);
+    background-size: 6px 8px;
+}
+
+.post-item-wrap img {
+    display: block;
+    width: 100%;
+    box-shadow: 4px 3px 7px rgba(126, 31, 67, 0.3);
+    transition: .3s;
+}
+
+.post-item:hover .post-item-wrap img {
+    transform: translate(12px, 12px);
+}
+
+.line {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 2;
+   margin: 12px 0 0 12px;
+   opacity: 0;
+   transition: .3s;
+}
+
+.line:before {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    margin: 0 0 0 -2px;
+    background: #9c3d5a;
+    border-radius: 50%;
+}
+
+.line:after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    left: 50%;
+    height: 50px;
+    top: 100%;
+    bottom: 0;
+    margin-top: 13px;
+    transform: scaleY(-1);
+    background: linear-gradient(to bottom, rgba(252, 71, 62, 0) 0%, rgb(145, 28, 67) 100%);
+}
+
+.post-item:hover .line {
+    opacity: 1;
+}
+
+.post-item-wrap:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    background: white;
+    transition: .3s;
+}
+
+.post-item:hover .post-item-wrap:after {
+    opacity: .7;
+    top: 12px;
+    left: 12px;
+    right: -12px;
+    bottom: -12px;
+}
+
+@media (min-width: 768px) {
+    .post-item {
+        flex-basis: 50%;
+        flex-shrink: 0;
+    }
+}
+
+@media (min-width: 960px) {
+   .post-item {
+      flex-basis: 33.333333333%;
+   }
+}
+
+/* Окно для просмотра фотографии*/
+
+.modal {
+    display: none; /* скрыто по умолчанию */
+    position: fixed; /* фиксированное положение */
+    z-index: 1000; /* поверх всего */
+    padding-top: 60px; /* отступ сверху */
+    left: 0;
+    top: 0;
+    width: 100%; /* ширина экрана */
+    height: 100%; /* высота экрана */
+    overflow: auto; /* прокрутка при необходимости */
+    background-color: rgba(0, 0, 0, 0.8); /* затемнение фона */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
 }
 

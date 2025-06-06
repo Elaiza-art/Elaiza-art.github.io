@@ -27,17 +27,11 @@
         <main>
             <article class="article block_decore">
                 <section>
-                    <img height="500" src="./image/Я.jpg" alt="Воть моя фотокарточка">
-                    <p>Привет! Меня зовут <strong>Елизавета</strong>, но можно просто <strong>Лиза</strong>)</p>
-                    <p>Мне 19 лет, и я учусь в ЧелГУ, в институте информационных технологий. 
-                        А это мой сайт-визитка как художника. Еще в садике я начала рисовать
-                        и мне это очень нравилось. В данной сфере я и по сей день
-                        совершенствуюсь и росту. </p>
-                    <p>Здесь я выкладываю изображения и рисунки как старые, так и новые.
-                         Портреты, пейзажи, различные персонажы из 
-                         фандомов и просто мои образы, взятые из головы,   
-                         так что вам не будет скучно!</p>  
-                    <p>Приятного просмотра)</p>    
+                    <img height="500" src="image/map.png" alt="моя карточка сайта" class="clickable-photo">
+                    <div id="imageModal" class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" id="modalImage" />
+                    </div>
                 </section>    
             </article>
 
@@ -59,6 +53,7 @@
                             <a href="" id="aside_nav"><h2>Я еще не придумала</h2></a>
                         </section>
                     </div>
+                    </section>
                 </section>
             </aside>
         </main>
@@ -82,6 +77,26 @@
             </ol>
         </footer>
     </div>
+    <script>
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const spanClose = document.getElementsByClassName('close')[0];
+
+        document.querySelector('.clickable-photo').onclick = function() {
+            modal.style.display = 'block';
+            modalImg.src = this.src;
+        }
+
+        spanClose.onclick = function() {
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+            modal.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 
 </html>
