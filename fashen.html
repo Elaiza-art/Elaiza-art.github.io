@@ -1,0 +1,88 @@
+ <!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Художественный блог</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="container" >
+        <header>
+            <div class="main"><a class="a_cool" id="main" href="index.html">Главная</a></div>
+            <nav >
+                <ul class="navigation ">
+                    <li><a class="a_cool" href="My_work.html">Мои работы</a></li>
+                    <li><a class="a_cool" href="sketch.html">Скейтчи</a></li>
+                    <li><a class="a_cool" href="mokap.html">Мокап</a></li>
+                    <li class="contacs"><a class="a_cool" id="contacs" href="#footer">Контакты</a></li>
+                </ul>
+            </nav>
+            <h1>Сайт-визитка Галичиной Елизаветы</h1>
+            <h3>Добро пожаловать! </h3>
+        </header>
+
+        <main>
+            <article class="article block_decore">
+                <p>Вот моего производства изображения. Я их рассположила от новых к старым, так что самые свеженькие картинки вверху &#128521;</p>
+                <p><i>Здесь не так много картинок, но я буду стараться пополнять его в будущем</i></p>
+                <p>Приятного просмотра &#127804;</p>
+
+                <section class="gallery">
+                    <img class="clickable-photo" id="photo_fence" height="400px" src="image/people/фэшн/rrrr.png" alt="">
+                </section>
+
+                <div id="imageModal" class="modal">
+                    <span class="close">×</span>
+                    <img class="modal-content" id="modalImage" />
+                </div>
+
+            </article>
+
+            <aside class="aside" >
+                <section>
+                    <h2>Боковой блок</h2>
+                    <p>Категории моих рисунков</p>
+                    <div class="section_based">
+                        <section class="block_section">
+                            <a id="aside_nav" href="people.html"><h3>People</h3></a>
+                        </section>
+                        <section class="block_section">
+                            <a id="aside_nav" href="anymal.html"><h3>Животные</h3></a>
+                        </section>
+                        <section class="block_section">
+                            <a id="aside_nav" href="viewes.html"><h3>Пейзажи</h3></a>
+                        </section>
+                        <section class="block_section" id="last_block">
+                            <a href="pers_fan.html" id="aside_nav"><h3>Персонажи по фандомам</h3></a>
+                        </section>
+                    </div>
+                </section>
+            </aside>
+        </main>
+
+        <footer id="footer">
+            <ol class="navigation ">
+                <li>
+                    <a href="https://t.me/Lizi_pu" target="_blank">
+                        <img class="symbol" height="40px" src="image/telegram.png" alt="ТГ">
+                    </a>
+                </li>
+                <li><a  href="https://github.com/Elaiza-art" target="_blank">
+                        <img class="symbol" height="40px" src="image/github.png" alt="GitHub">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ru.pinterest.com/Zeniza_oka/" target="_blank">
+                        <img class="symbol" height="40px" src="image/pinterest.png" alt="Pinterest">
+                    </a>
+                </li>
+            </ol>
+        </footer>
+    </div>
+    <script src="script.js">
+    </script>
+</body>
+</html>
